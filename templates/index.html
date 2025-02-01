@@ -1,15 +1,134 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的 Ubuntu 网页</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>偷颗心放怀里的音乐小站</title>
+    <style>
+        /* 设置页面背景和字体样式 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+            color: #333;
+            text-align: center;
+        }
+
+        /* 顶部导航栏样式 */
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 18px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        /* 主要内容区样式 */
+        .content {
+            margin-top: 80px; /* 避开固定导航栏的高度 */
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* 背景音乐控制区 */
+        .music-control {
+            margin-top: 20px;
+        }
+
+        audio {
+            margin-top: 15px;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <h1>欢迎来到我的 Ubuntu 网页</h1>
-    <p>这是一个简单的 Flask + HTML 网站。</p>
-    <button onclick="showMessage()">点我试试</button>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- 顶部导航栏 -->
+    <div class="navbar">
+        <a href="https://www.google.com" target="_blank">Google</a>
+        <a href="https://jf.yxsm.fun" target="_blank">jellyfin</a>
+        <a href="https://jk.yxsm.us.kg/" target="_blank">鸡窝</a>
+        <a href="https://www.youtube.com" target="_blank">YouTube</a>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="content">
+        <h1>欢迎来到偷颗心放怀里的小站</h1>
+        <p>放松心情，享受美妙的音乐。</p>
+
+        <!-- 背景音乐 -->
+        <div class="music-control">
+            <p>当前背景音乐：红枣树</p>
+            <audio controls autoplay loop>
+                <source src="hongzaoshu.mp3" type="audio/mpeg">
+                您的浏览器不支持音频播放。
+            </audio>
+        </div>
+
+        <!-- 更多操作按钮 -->
+        <a class="btn" href="https://www.google.com" target="_blank"> 谷歌</a>
+        <a class="btn" href="https://www.google.com" target="_blank"> 谷歌</a>
+        <a class="btn" href="https://www.cloudflare.com" target="_blank"> cloudflare</a>
+        <a class="btn" href="https://dot.nyc.mn/" target="_blank"> nyc.mn免费域名注册</a>
+        <a class="btn" href="https://coproxy.io/free-web-proxy/" target="_blank"> 代理网站3</a>
+        <a class="btn" href="https://www.ip111.cn" target="_blank"> 查询ip地址</a>
+        <a class="btn" href="https://www.ct8.pl" target="_blank"> ct8</a>
+        <a class="btn" href="https://www.youtube.com" target="_blank"> YouTube</a>
+        <a class="btn" href="https://ssh.yxsm.fun" target="_blank"> webssh</a>
+        <a class="btn" href="https://dachu.us.kg/" target="_blank"> 大厨鸡窝</a>
+        <a class="btn" href="https://www.lumiproxy.com/zh-hans/online-proxy/proxysite/" target="_blank"> 网页代理</a>
+        <a class="btn" href="https://scamalytics.com/" target="_blank"> 查看IP纯净度</a>
+        <a class="btn" href="https://www.croxyproxy.com/" target="_blank"> 网页代理2</a>
+        <a class="btn" href="https://nic.us.kg/" target="_blank"> 注册免费US.KG域名</a>
+        <a class="btn" href="https://sms-activate.io" target="_blank"> 国外手机接码网</a>
+        <a class="btn" href="https://fiber.google.com/speedtest/" target="_blank"> Google测速网</a>
+        <a class="btn" href="https://ss.botai.us.kg" target="_blank"> 查看serv00哪些被墙</a>
+        <a class="btn" href="https://www.serv00.com" target="_blank"> Serv00官网</a>
+        <a class="btn" href="https://shell.segfault.net/#/dashboard" target="_blank"> 不知道是个啥服务器</a>
+    </div>
 </body>
 </html>
